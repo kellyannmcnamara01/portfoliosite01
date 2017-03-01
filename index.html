@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+
+	Author: Kelly Ann McNamara
+	Date Started: Novemeber 18th, 2016
+	Class: Digital Design
+	Professor: Joanna Kommala
+	Project: Assignment 3 – Coding Portfolio Website
+
+	________________________________________________
+
+	INDEX
+	01. Main Nav
+		01-1. Logo
+		01-2. Links
+		01.3. Mobile Menu 
+	00. Call Out
+	02. About
+		02-1. Intro About
+		02-2. Design About
+		02-3. Development About
+	03. Portfolio
+		03-1. Title
+		03-2. Portfolio Item One
+		03-3. Portfolio Item Two
+		03-4. Portfolio Item Three
+	04. Contact
+		04-1. Title
+		04-2. Contact Intro
+		04-3. Form
+	05. Footer
+	
+-->
+
+<html lang="en">
+<head>
+	<title>Kelly Ann McNamara | Desginer &amp; Web Developer</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width">
+	<!-- Improting Files -->
+	<script type="text/javascript" src="js.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script type="text/javascript" src="js.js"></script>
+	<script src="https://use.typekit.net/ezt8xfx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+<body>
+	<!-- 01. Main Nav -->
+	<nav id="main-nav">
+		<!-- 01-1. Logo -->
+		<div id="nav-logo">
+			<p id="nav-logo-type">k/a/m</p>
+		</div>
+		<!-- 01-2. Links -->
+		<div id="main-links">
+			<ul>
+				<li><a href="#about" title="About" class="nav-line">about</a></li>
+				<li><a href="#portfolio-section" title="Portfolio" class="nav-line">portfolio</a></li>
+				<li><a href="#contact-section" title="Contact Kelly" class="nav-line">contact</a></li>
+			</ul>
+		</div>
+		<!-- 01.3. Mobile Menu -->
+		<div class="menu-toggle" onclick="toggleMenu()">
+		  <div id="hamham" onclick="exception()">
+		    <span></span>
+		    <span></span>
+		    <span></span>
+		    <span>menu</span>
+		    <span>exit</span>
+		  </div>
+		</div>
+		<div id="mobile-nav">
+		  <ul>
+		    <li><a href="#about" title="About" class="nav-line">about</a></li>
+				<li><a href="#portfolio-section" title="Portfolio" class="nav-line">portfolio</a></li>
+				<li><a href="#contact-section" title="Contact Kelly" class="nav-line">contact</a></li>
+		  </ul>
+		</div>
+	</nav>
+	<!-- Main Content -->
+	<main id="main">
+		<!-- 00. Call Out -->
+		<div class="wrapper">
+			<h1 id="call-out">design &amp; code.</h1>
+		</div>
+	<!-- 02. About -->
+		<div id="about">
+		<div class="wrapper">
+			<!-- 02-1. Intro About -->
+			<article id="intro-about-section">
+				<div class="line-drop-c">
+					<div class="line-drop"></div>
+				</div>
+				<h3 class="h3-text">about</h3>
+					<h2 id="h2-text">
+						Hello, I’m Kelly Ann McNamara. A digital designer &amp; full stack developer.
+					</h2>
+			</article>
+			<div class="clear-float"></div>
+			<!-- 02-2. Design About -->
+			<div id="svg-design-title">
+				<article id="design-about-section">
+					<div class="line-drop-l">
+						<div class="line-drop"></div>
+					</div>
+					<h4 class="h4-text">01</h4>
+					<p class="p-text">
+						<strong>Design</strong> – 2014 graduate student from Cambrian College Advanced Graphic Design diploma program. Leaving with honors and the RGD Student Award of Excellence, I entered the field as a graphic designer at a start-up marketing agency. Consistently learning and mainly focusing on user experience and interaction with online brands through websites, structure and design has greatly expanded my abilities.
+					</p>
+				</article>
+			</div>
+			<!-- 02-3. Development About -->
+			<article id="dev-about-section">
+				<div class="line-drop-r">
+					<div class="line-drop"></div>
+				</div>
+				<div class="clear-float"></div>
+				<h4 class="h4-text-r">02</h4>
+				<p class="p-text">
+					<strong>Development</strong> – As a creature of intense curiosity I never just want to work on a section of the project but rather immerse myself in all the playing factors, this is why I decided to go back to school. In 2017 I graduated from Humber College Post-Grad Web Development program. Through this intensive program, I became a full stack developer.
+				</p>
+			</article>
+			<div class="clear-float"></div>
+			<div class="line-drop-c">
+				<div class="line-drop" id="portfolio-section"></div>
+			</div>
+			<h3 class="h3-text">portfolio</h3>
+		</div>
+		</div>
+		<!-- 03. Portfolio -->
+		<section id="portfolio">
+		<div class="wrapper">
+			<!-- 03-1. Title -->
+			<div class="line-drop-c">
+				<div class="line-drop"></div>
+			</div>
+			<!-- 03-2. Portfolio Item One -->
+			<div class="portfolio-imgs">
+				<img src="opt-imgs/portfolio-1.jpg" alt="Chocolate silk pie with fresh raspberries" >
+			</div>
+			<div class="portfolio-item-l" id="portfolio-item-1">
+				<div class="line-drop-l">
+					<div class="line-drop"></div>
+				</div>
+				<h4 class="h4-text">01</h4>
+				<p class="p-text">
+					<strong>Food Photography</strong> – I have a weakness for sweets, and I combined that with my passion for photography.  It slowly became a hobby of mine and I have been able to create many series of delicious food photographed. Please look through a few selected pieces.
+				</p>
+				<p class="p-text">
+					<a href="https://www.behance.net/gallery/36483965/Baked-Goods-Vol01" title="View the full portfolio for " class="portfolio-btn" target="_blank">view portfolio site</a>
+				</p>
+			</div>
+			<div class="line-drop-c">
+				<div class="line-drop"></div>
+			</div>
+			<!-- 03-3. Portfolio Item Two -->
+			<div class="portfolio-imgs">
+				<img src="opt-imgs/portfolio-2.jpg" alt="Abstract collage of two men taking a selfie" >
+			</div>
+			<div class="portfolio-item-r" id="portfolio-item-2">
+				<div class="line-drop-r">
+					<div class="line-drop"></div>
+				</div>
+				<div class="clear-float"></div>
+				<h4 class="h4-text-r">02</h4>
+				<p class="p-text">
+					<strong>Dream Job</strong> – The task for this project was unique. It pushed boundaries on how to view services within the marketing & advertising industries.
+				</p>
+				<div class="clear-float"></div>
+				<p class="p-text">
+					The challenge was to not show modern devises or bad stock photography. By creating a surrealist college for each service, this allowed me to display different visuals while still looking cohesive and modern. This created an abstract and dream-like tone for the project. 
+				</p>
+				<div class="clear-float"></div>
+				<p class="p-text">
+					<a href="https://www.behance.net/gallery/36363295/Dream-Job" title="View the full portfolio for " class="portfolio-btn" target="_blank">view portfolio site</a>
+				</p>
+			</div>
+			<div class="clear-float"></div>
+			<div class="line-drop-c">
+				<div class="line-drop"></div>
+			</div>
+			<!-- 03-4. Portfolio Item Three -->
+			<div class="portfolio-imgs">
+				<img src="opt-imgs/portfolio-3.jpg" alt="Webstie design for 81 Entertainment" >
+			</div>
+			<div class="portfolio-item-l" id="portfolio-item-3">
+				<div class="line-drop-l">
+					<div class="line-drop"></div>
+				</div>
+				<h4 class="h4-text">03</h4>
+				<p class="p-text">
+					<strong>Site Redesign</strong> – 81 Entertainment is a local media production agency. They came to me asking for a site redesign to align with thier new branding. This project was built on wordpress and includes many animations. 
+				</p>
+				<p class="p-text">
+					<a href="http://kellyannmcnamara.ca/clients/81entertainment/" title="View the full portfolio for " class="portfolio-btn" target="_blank">view portfolio site</a>
+				</p>
+			</div>
+			<div class="line-drop-c">
+				<div class="line-drop" id="contact-section"></div>
+			</div>
+		</div>
+		</section>
+		<!-- 04. Contact -->
+		<section id="contact">
+		<div class="wrapper">
+			<!-- 04-1. Title -->
+			<h3 class="h3-text">contact</h3>
+			<div class="line-drop-c">
+				<div class="line-drop"></div>
+			</div>
+			<!-- 04-2. Contact Intro -->
+			<div id="contact-info">
+				<p  class="p-text">
+					<strong>Let’s work together!</strong> – Reatch out to me ether by the form below or through my contact information. I am always interested to see what great new partnership is out there.
+				</p>
+				<div class="clear-float"></div>
+				<p class="p-text">
+					email <a href="mailto:hi@kellyannmcnamara.ca" title="Email Kelly Ann McNamara" class="contact-link">hi@kellyannmcnamara.ca</a>
+					behance <a href="http://be.net/kellyannmcnamara" title="Email Kelly Ann McNamara" class="contact-link" target="_blank">be.net/kellyannmcnamara</a>
+				</p>
+			</div>
+			<div class="clear-float"></div>
+			<!-- 04-3. Form -->
+			<div id="contact-form">
+			<form action="#" method="get">
+			  <div class="form-field">
+			    <input type="text" id="name" required/>
+			    <span class="bottom-bar"></span>
+			    <label for="name">full name</label>
+			  </div>
+			  <div class="form-field">
+			    <input type="text" id="email" required/>
+			    <span class="bottom-bar"></span>
+			    <label for="email">email</label>
+			  </div>
+			  <div class="form-field">
+			    <textarea id="msg" name="comments" required></textarea>
+			    <span class="bottom-bar"></span>
+			    <label for="msg">message</label>
+			  </div>
+			  <button type="submit" id="submit">send</button>
+			</form>
+			</div>
+		</div>
+		</section>
+	</main>
+	<!-- 05. Footer -->
+	<footer id="footer">
+		<p id="footer-text">thank you for visiting!</p>
+	</footer>
+</body>
+</html>
+
+
+
+
+

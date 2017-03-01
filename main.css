@@ -1,0 +1,681 @@
+/*
+	
+	Author: Kelly Ann McNamara;
+	Date Started: Novemeber 18th, 2016;
+	Class: Digital Design;
+	Professor: Joanna Kommala;
+	Project: Assignment 3 – Coding Portfolio Website; 
+
+	_________________________________________________
+
+	INDEX
+	01. Attributes
+	02. Colours
+	03. Main Nav
+	04. Typography
+	05. Placement
+	06. Drop Line
+	07. SVG Backgrounds
+	08. Form Styling
+	09. Media Queries
+		09-1. Media Qurey Menu
+		09-2. Media Query Hamham
+		09-3. Hamham to Exit
+
+*/
+
+
+
+/* =============== 01. Attributes =============== */
+
+* {
+	margin: 0 auto;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+body {
+	font-size: 62.5%;
+	margin: 0 auto;
+	background: #e8faff;
+	font-family: "aaux-next",sans-serif;
+}
+#main {
+	margin: 0 auto;
+	padding-top: 60vh;
+	position: relative;
+}
+.wrapper {
+	max-width: 1025px;
+	padding: 0px 30px;
+}
+.portfolio-imgs {
+	margin-top: 15px;
+	border: solid 1px #fff;
+	max-width: 803px;
+}
+img {
+	width: 100%;
+}
+.clear-float {
+	clear: both;
+	float: none;
+}
+#about {
+	background: linear-gradient(180deg, #e8faff 5%, #e6d3d9 100%);
+}
+#portfolio {
+	background: linear-gradient(180deg, #e8faff 0%, #bfe5ea 100%);
+	padding-top: 55px;
+	margin-top: -70px;
+}
+#contact {
+	background: linear-gradient(180deg, #bfe5ea 3%, #45469d 100%);
+}
+#footer {
+	background: #6a6ab1;
+	padding: 15px 0px;
+}
+/* =============== 02. Colours =============== */
+
+.white {
+	color: #fff;
+}
+.light-grey {
+	color: #e8faff;
+}
+.light-blue {
+	color: #bfe5ea;
+}
+.sky-blue {
+	color: #81d8e4;
+}
+.slate-blue {
+	color: #4c5d72;
+}
+.light-pink {
+	color: #e6d3d9;
+}
+.dark-pink {
+	color: #ab8a93;
+}
+.light-purple {
+	color: #6a6ab1;
+}
+.dark-purple {
+	color: #45469d;
+}
+
+/* =============== 03. Main Nav =============== */
+
+#main-nav {
+	width: 100%;
+	padding: 10px 30px 5px;
+	background: #e8faff;
+	clear: both;
+	position: fixed;
+	z-index: 1;
+}
+#nav-logo {
+	margin: 0;
+	color: #45459d;
+	font-family: "eloquent-jf-pro";
+	font-size: 2.5em;
+	letter-spacing: 2px;
+	float: left;
+}
+#main-links {
+	float: right;
+}
+nav ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	padding-left: 20px;
+	padding-top: 7px;
+}
+nav ul li a {
+	color: #6a6ab1;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 1.8em;
+}
+nav ul li a:hover, nav ul li a:active {
+	color: #4c5d72;
+}
+.nav-line {
+	padding: 0px 2px 3px 2px;
+	position: relative;
+	width: 100%;
+}
+.nav-line::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 0;
+	-webkit-transition: width .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.nav-line::after {
+	content: '';
+	position: absolute;
+	left: 100%;
+	height: 4px;
+	width: 0;
+}
+.nav-line:hover::before {
+	width: 100%;
+	background: #4c5d72;
+}
+.nav-line:hover::after {
+	width: 0;
+	background: transparent;
+}
+
+/* =============== 04. Typography =============== */
+
+#call-out {
+	font-family: "eloquent-jf-pro";
+	font-size: 11em;
+	margin: 0;
+	line-height: -1;
+	font-weight: 100;
+	background: linear-gradient(315deg, #8cc1d8 30%, #686da8 100%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+  	max-width: 466px;
+  	line-height: 100px;
+  	padding-top: 20px;
+}
+#h2-text{
+	color: #9a7c84;
+	font-size: 2.5em;
+	font-weight: 400;
+	max-width: 340px;
+	line-height: 1;
+}
+.h3-text, .h4-text, .h4-text-r {
+	color: #ab8a93;
+	font-family: "eloquent-jf-pro";
+	font-size: 7.5em;
+	font-weight: 100;
+	margin: 0px;
+}
+.h3-text {
+	text-align: center;
+}
+.h4-text-r {
+	text-align: right;
+	margin-left: 0px;
+}
+#portfolio .h4-text, #portfolio .h4-text-r {
+	color: #62ccdb;
+}
+.p-text {
+	color: #4c5d72;
+	font-size: 1.6em;
+	font-weight: 400;
+	
+	max-width: 320px;margin: 0 0 0 23px;
+}
+.portfolio-btn {
+	color: #4c5d72;
+	text-decoration: none;
+	box-shadow: inset 0px 0px 0px 2px #4c5d72;
+	padding: 5px 20px;
+	transition: all 0.5s ease;
+}
+.portfolio-btn:focus, .portfolio-btn:hover, .portfolio-btn:active {
+	color: #fff;
+	box-shadow: inset 0px 50px 0px 2px #4c5d72;
+}
+#portfolio p, #contact p {
+	margin-bottom: 30px;
+}
+#contact p {
+	color: #fff;
+}
+.contact-link {
+	color: #fff;
+	text-align: right;
+	padding-left: 60px;
+	transition: all 1s ease;
+}
+.contact-link:hover, .contact-link:active {
+	color: #81d8e4;
+}
+.contact-link:nth-child(2){
+	padding-left: 40px;
+}
+#footer-text {
+	color: #fff;
+	text-align: center;
+	font-size: 1.8em;
+	letter-spacing: 1px;
+}
+
+/* =============== 05. Placement =============== */
+
+#intro-about-section #h2-text, #dev-about-section, .portfolio-item-r, #contact-info {
+	width: 75%;
+	float: right;
+}
+#intro-about-section #h2-text{
+	margin-right: 15%;
+}
+#dev-about-section p, .portfolio-item-r p, #contact-info p {
+	float: right;
+} 
+#design-about-section, .portfolio-item-l {
+	padding-left: 15%;
+}
+#dev-about-section, .portfolio-item-r, #contact-info {
+	padding-right: 10%;
+}
+#portfolio-item-1, #portfolio-item-2, #portfolio-item-3 {
+	margin-top: -200px;
+}
+.menu-toggle, #mobile-nav {
+  display: none;
+}
+
+/* =============== 06. Drop Line =============== */
+.line-drop {
+	position: absolute;
+  	margin: auto;
+ 	width: 2px;
+  	height: 220px;
+  	overflow: hidden;  
+  	left: 0;
+  	right: 0;
+}
+.line-drop::after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translateY(0%);
+  animation: line-scroll 4s;
+  animation-iteration-count: 1;
+}
+@keyframes line-scroll, @-webkit-keyframes line-scroll {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.line-drop-c, .line-drop-l, .line-drop-r {
+	height: 220px;
+	width: 2px;
+	position: relative;
+}	
+.line-drop-l {
+	margin: 0px 0px 0px 24px;
+}
+.line-drop-r {
+	margin: 0px 70px 0px 0px;
+	float: right;
+}
+
+/* =============== 07. SVG Backgrounds =============== */
+
+#design-about-section {
+	background-image: url(opt-imgs/design.svg);
+	background-repeat: no-repeat;
+	background-size: 68%;
+	background-position: 0px 265px;
+}
+#dev-about-section {
+	background-image: url(opt-imgs/coding.svg);
+	background-repeat: no-repeat;
+	background-size: 94%;
+	background-position: right 265px;
+}
+#portfolio-item-1 {
+	background-image: url(opt-imgs/food-photos.svg);
+	background-repeat: no-repeat;
+	background-size: 75%;
+	background-position: 0px 265px;
+}
+#portfolio-item-2 {
+	background-image: url(opt-imgs/dream-job.svg);
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: right 265px;
+}
+#portfolio-item-3 {
+	background-image: url(opt-imgs/site-revamp.svg);
+	background-repeat: no-repeat;
+	background-size: 73%;
+	background-position: 0px 265px;
+}
+
+/* =============== 08. Form Styling =============== */
+
+#contact-form {
+  padding-top: 50px;
+  max-width: 305px;
+  padding-bottom: 50px;
+  margin-left: 15%;
+}
+.form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+input, textarea {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 305px;
+  border: none;
+  border-bottom: solid 1px #fff;
+  background: none;
+  color: #fff;
+  font-weight: lighter;
+}
+textarea{ 
+  height: 100px;
+  border: solid 1px #fff;
+  border-top: none;
+  margin-top: 40px;
+}
+textarea:focus {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+label {
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 10px;
+  transition: all 1s ease;
+}
+input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label {
+  top: -15px;
+  font-size: 14px;
+  color: #8ca1cf;
+}
+.bottom-bar {
+  position: relative;
+  display: block;
+  width: 305px;
+}
+.bottom-bar::before, .bottom-bar::after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #8ca1cf; 
+  transition: all 1s ease;
+}
+.bottom-bar::before {
+  left: 50%;
+}
+.bottom-bar::after {
+  right: 50%;
+}
+input:focus ~ .bottom-bar::before, input:focus ~ .bottom-bar::after {
+  width: 50%;
+}
+#submit {
+	color: #fff;
+	text-decoration: none;
+	box-shadow: inset 0px 0px 0px 1px #fff;
+	padding: 5px 20px;
+	background: none;
+	border: none;
+	font-size: 1.6em;
+	font-weight: 400;
+	transition: all 0.5s ease;
+	letter-spacing: 1px;
+}
+#submit:focus, #submit:hover, #submit:active {
+	color: #45469d;
+	box-shadow: inset 0px 50px 0px 1px #fff;
+	outline: none;
+}
+
+/* =============== 09. Media Queries =============== */
+
+@media all and (max-width: 768px) {
+	#intro-about-section #h2-text, #dev-about-section, .portfolio-item-r, #contact-info {
+		width: 100%;
+	}
+	.line-drop, .line-drop-c, .line-drop-l, .line-drop-r {
+		height: 116px;
+	}
+	#design-about-section, #portfolio-item-1, #portfolio-item-3 {
+		background-position: 0px 165px;
+		background-size: 88%;
+	}
+	#dev-about-section, #portfolio-item-2 {
+		background-position: right 165px;
+		background-size: 88%;
+	}
+	#design-about-section, .portfolio-item-l {
+		padding-left: 0;
+	}
+	#dev-about-section, .portfolio-item-r, #contact-info {
+		padding-right: 0;
+	}
+	#portfolio-item-1, #portfolio-item-2, #portfolio-item-3 {
+		margin-top: -75px;
+	}
+	#contact-form {
+		margin-left: 0;
+	}
+	#main {
+		padding-top: 55vh;
+	}
+}
+
+/* =============== */
+
+@media all and (max-width: 480px) {
+
+	#main {
+		padding-top: 63vh;
+	}
+	#call-out {
+		font-size: 7.4em;
+	}
+	#h2-text {
+		text-align: center;
+	}
+	.h3-text, .h4-text, .h4-text-r {
+		font-size: 6em;
+	}
+	.h4-text, .h4-text-r {
+		text-align: left;
+	}
+	p {
+		padding-bottom: 5px;
+	}
+	#intro-about-section #h2-text {
+		margin-right: 0;
+	}
+	#intro-about-section #h2-text, #dev-about-section, .portfolio-item-r, #contact-info {
+		width: 100%;
+		float: none;
+	}
+	#dev-about-section p, .portfolio-item-r p, #contact-info p {
+		float: none;
+	}
+	#design-about-section, #portfolio-item-1, #portfolio-item-3, #dev-about-section, #portfolio-item-2 {
+		background-position: 0 165px;
+		background: none;
+	}
+	#contact-info {
+		margin-left: 0;
+	}
+	#portfolio {
+		padding-top: 55px;
+		margin-top: -57px;
+	}
+	.line-drop {
+		padding: 10px 0px;
+	}
+	.line-drop-r {
+		float: none;
+		margin: 0px 0px 0px 24px;
+	}
+	#main-links {
+		display: none;
+	}
+	#nav-logo {
+		padding-top: 7px;
+	}
+
+	/* =============== 09-1. Media Qurey Menu =============== */
+
+	.menu-toggle {
+	  display: block;
+	  float: right;
+	}
+	#mobile-nav {
+	  display: block;
+	  position: absolute;
+	  top: -1000px;
+	  z-index: 100000px;
+	  width: 90%;
+	  height: 100vh;
+	}
+	#mobile-nav.show-small {
+	  position: relative;
+	  background: #bfe5ea;
+	  top: 45px;
+	  z-index: 5000px;
+	  padding-top: 50px;
+	  clear: both;
+	  -webkit-transition: .6s ease-in-out;
+	  -moz-transition: .6s ease-in-out;
+	  -o-transition: .6s ease-in-out;
+	  transition:  .6s ease-in-out;
+	}
+	#mobile-nav li {
+	  display: block;
+	  padding-left: 0px;
+	}
+	/* Nav Font Styling */
+	nav ul {
+	  list-style: none;
+	  margin-top: 0;
+	  text-align: center;
+	  padding-left: 0;
+	}
+	nav ul li a {
+	  text-decoration: none;
+	  font-size: 2.5em;
+	  font-weight: 400;
+	  max-width: 340px;
+	  line-height: 2;
+	  font-family: "eloquent-jf-pro";
+	}
+
+	/* =============== 09-2. Meddia Query Hamham =============== */
+
+	#hamham {
+	  position: relative;
+	  width: 50px;
+	  height: 40px;
+	  margin: 5px;
+	  padding: 5px 5px 5px 0px;
+	}
+	#hamham span {
+	  position: absolute;
+	  height: 3px;
+	  width: 100%;
+	  margin-right: 20px;
+	  background: #45459d;
+	  border-radius: none;
+	  -webkit-transition: .6s ease-in-out;
+	  -moz-transition: .6s ease-in-out;
+	  -o-transition: .6s ease-in-out;
+	  transition: .6s ease-in-out;
+	}
+	#hamham span:nth-child(2) {
+	  top: 12px;
+	}
+	#hamham span:nth-child(3) {
+	  top: 20px;
+	}
+	#hamham span:nth-child(4), #hamham span:nth-child(5) {
+	  top: 24px;
+	  font-size: 18px;
+	  margin-top: -5px;
+	  display: block;
+	  background: none;
+	  color: #45459d;
+	  letter-spacing: 3px;
+	  font-family: "aaux-next",sans-serif;
+	}
+	#hamham span:nth-child(5) {
+	  transform: translateX(10px);
+	  opacity: 0;
+	}
+	/* =============== 09-3. Hamham to Exit =============== */
+
+	#hamham.open span {
+	 height: 5px;
+	}
+	#hamham.open span:nth-child(1) {
+	  transform: translate(12px, 8px) rotate(-225deg);
+	  width: 20px;
+	}
+	#hamham.open span:nth-child(2) {
+	  transform: translate(11px, 10px) rotate(270deg);
+	  width: 35px;
+	}
+	#hamham.open span:nth-child(3) {
+	  transform: translate(24px, -8px) rotate(225deg);
+	  width: 20px;
+	}
+	#hamham.open span:nth-child(4) {
+	  opacity: 0;
+	  transform: translate(10px, 30px);
+	}
+	#hamham.open span:nth-child(5) {
+	  transform: translate(10px, 30px);
+	  opacity: 1;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

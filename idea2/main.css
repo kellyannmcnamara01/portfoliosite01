@@ -1,0 +1,646 @@
+/*
+
+	Author: Kelly Ann McNamara;
+	Date Started: Novemeber 18th, 2016;
+	Class: Digital Design;
+	Professor: Joanna Kommala;
+	Project: Assignment 3 – Coding Portfolio Website;
+
+	_________________________________________________
+
+	INDEX
+	01. Attributes
+	00. ViewPort Boarder
+    02. Navigation
+    03. Intro
+        03-1. Intro Placement
+        03-2. Intro Typography
+        03-3. Intro Animations
+
+	_________________________________________________
+
+	COLOURS
+	purple: #8306e2;
+	white: #fff;
+	dark-grey: #25232e;
+	green: #56eda6;
+
+*/
+
+/* =============== 01. Attributes =============== */
+
+* {
+	margin: 0 auto;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+body {
+	font-size: 62.5%;
+	margin: 0 auto;
+	font-family: "aaux-next",sans-serif;
+	text-rendering: geometricPrecision;
+}
+#main {
+	margin: 0 auto;
+	padding-top: 80px;
+	position: relative;
+}
+.wrapper {
+	max-width: 1025px;
+	padding: 0px 30px;
+}
+#section1 {
+	height: 90vh;
+	min-height: 600px;
+	padding-top: calc(50% - 375px);
+}
+#section2 {
+    padding: 100px 0px;
+    background: #25232e;
+}
+#section3 {
+    padding: 100px 0px;
+    background: pink;
+}
+
+/* =============== 02. ViewPort Border =============== */
+
+#view-border__top, #view-border__right, #view-border__bottom, #view-border__left {
+	position: absolute;
+	background: #8306e2;
+	position: fixed;
+	z-index: 10000;
+}
+#view-border__top, #view-border__bottom {
+	height: 15px;
+	width: 100%;
+}
+#view-border__right, #view-border__left {
+	width: 15px;
+	height: 100%;
+}
+#view-border__top {
+	top: 0;
+	left: 0;
+}
+#view-border__right {
+	top: 0;
+	right: 0;
+}
+#view-border__bottom {
+	bottom: 0;
+	left: 0;
+}
+#view-border__left {
+	top: 0;
+	left: 0;
+}
+.border-break {
+	border-bottom: 15px solid #8306e2;
+}
+
+/* =============== 02. Navigation =============== */
+
+#main-nav {
+	width: 100%;
+	padding: 10px 30px 5px;
+	clear: both;
+	position: fixed;
+	z-index: 1;
+}
+#nav-logo {
+	margin: 0;
+	color: #8306e2;
+	padding-top: 8px;
+	font-family: "eloquent-jf-pro";
+	font-size: 2.5em;
+	letter-spacing: 2px;
+	float: left;
+}
+#main-links {
+	float: right;
+}
+nav ul {
+	list-style: none;
+}
+nav ul li {
+	display: inline-block;
+	padding-left: 20px;
+	padding-top: 7px;
+}
+nav ul li a {
+	color: #8306e2;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 1.8em;
+}
+nav ul li a:hover, nav ul li a:active {
+	color: #4c5d72;
+}
+.nav-line {
+	padding: 0px 2px 3px 2px;
+	position: relative;
+	width: 100%;
+}
+.nav-line::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 2px;
+	width: 0;
+	-webkit-transition: width .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+.nav-line::after {
+	content: '';
+	position: absolute;
+	left: 100%;
+	height: 4px;
+	width: 0;
+}
+.nav-line:hover::before {
+	width: 100%;
+	background: #4c5d72;
+}
+.nav-line:hover::after {
+	width: 0;
+	background: transparent;
+}
+
+/* =============== 03. Intro =============== */
+
+/* =============== 03-1. Intro Placement =============== */
+
+#intro {
+	/*border: solid 10px #8306e2;
+	padding: 50px 0px 50px 50px;*/
+	max-width: 537px;
+	margin: 0 auto;
+	position: relative;
+	/*margin-bottom: 100px;*/
+}
+/*#intro span {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 7px #fff;
+    border-style: solid dashed;
+    width: 100%;
+    height: 100%;
+    animation: borderjiggle1 2s linear;
+}
+#intro span:nth-child(2) {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 5px #fff;
+    border-style: dashed solid;
+    width: 100%;
+    height: 100%;
+    animation: borderjiggle2 2s linear;
+}
+#intro span:nth-child(3) {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: solid 7px #fff;
+    width: 100%;
+    height: 100%;
+    animation: borderjiggle3 2s linear;
+}
+#intro:hover span {
+    display: block;
+}*/
+/* =============== 03-2. Intro Typography =============== */
+
+#call-out {
+	font-family: "eloquent-jf-pro";
+	font-size: 11em;
+	margin: 0;
+	font-weight: 100;
+	color: #8306e2;
+	max-width: 537px;
+	padding-top: 50px;
+	padding-bottom: 35px;
+	line-height: 100px;
+	text-transform: uppercase;
+}
+/*#intro:hover #call-out {
+	text-shadow: -5px -5px #8306e2;
+	animation: textshadow1 2s linear;
+	background-image: url("opt-imgs/pattern2.gif");
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}*/
+#h2-text{
+	color: #8306e2;
+	font-size: 1.6em;
+	font-weight: 400;
+	max-width: 550px;
+	line-height: 1.25;
+	margin-left: 15px;
+	padding-bottom: 25px;
+}
+/* =============== 03-3. Intro Animations ===============
+
+@keyframes borderjiggle1 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  1%, 12% {
+    top: 10px;
+    left: 0px;
+  }
+  13% {
+    top: 3px;
+    left: -10px;
+    opacity: 0;
+  }
+  24% {
+    top: 3px;
+    left: -10px;
+    opacity: 1;
+  }
+  25%, 35% {
+    top: -20px;
+    left: 10px;
+    opacity: 1;
+  }
+  36% {
+    top: 8px;
+    left: 5px;
+    opacity: 0;
+  }
+  56% {
+    top: 8px;
+    left: 5px;
+    opacity: 1;
+  }
+  57%, 58% {
+    top: -5px;
+    left: -15px;
+    opacity: 0;
+  }
+  59%, 62% {
+    top: 7px;
+    left: -25px;
+    opacity: 1;
+  }
+  64%, 70% {
+    top: -10px;
+    left: 20px;
+    opacity: 0;
+  }
+  72%, 80% {
+    top: 0px;
+    left: -3px;
+    opacity: 1;
+  }
+  81%, 85% {
+    top: 30px;
+    left: 15px;
+    opacity: 0;
+  }
+  86%, 90% {
+    opacity: 1;
+  }
+  92%, 95% {
+    top: -10px;
+    left: 0px;
+    opacity: 1;
+  }
+  96%, 98% {
+    top: 0;
+    left: -5px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes borderjiggle2 {
+  0% {
+    top: -15px;
+    left: 0;
+    opacity: 0;
+  }
+  1%, 12% {
+    top: 0px;
+    left: -10px;
+    opacity: 1;
+  }
+  13% {
+    top: 10px;
+    left: -5px;
+    opacity: 0;
+  }
+  24% {
+    top: -10px;
+    left: 0px;
+    opacity: 1;
+  }
+  25%, 35% {
+    top: 10px;
+    left: -5px;
+    opacity: 1;
+  }
+  36% {
+    top: 8px;
+    left: 5px;
+    opacity: 0;
+  }
+  56% {
+    top: 8px;
+    left: 5px;
+    opacity: 1;
+  }
+  57%, 58% {
+    top: -10px;
+    left: -15px;
+    opacity: 0;
+  }
+  59%, 62% {
+    top: 10px;
+    left: -25px;
+    opacity: 1;
+  }
+}
+@keyframes borderjiggle3 {
+  0% {
+    top: 5px;
+    left: 5px;
+    opacity: 1;
+  }
+  1%, 12% {
+    top: 0px;
+    left: -3px;
+    opacity: 0;
+  }
+  13% {
+    top: -5px;
+    left: 0px;
+    opacity: 1;
+  }
+  24% {
+    top: -2px;
+    left: 5px;
+    opacity: 0;
+  }
+  25%, 35% {
+    top: 7px;
+    left: 0px;
+    opacity: 0;
+  }
+  36% {
+    top: 0px;
+    left: -5px;
+    opacity: 1;
+  }
+  56% {
+    top: -3px;
+    left: 5px;
+    opacity: 0;
+  }
+  57%, 58% {
+    top: -5px;
+    left: -8px;
+    opacity: 1;
+  }
+  59%, 62% {
+    top: 7px;
+    left: 0px;
+    opacity: 0;
+  }
+}
+@keyframes textshadow1 {
+	0%, 10% {
+		text-shadow: 5px 5px #8306e2;
+	}
+	15%, 20% {
+		text-shadow: 0px 0px #8306e2;
+	}
+	25% {
+		text-shadow: -8px 8px #8306e2;
+	}
+	30%, 55% {
+		text-shadow: 0px 0px #8306e2;
+	}
+	60%, 65% {
+		text-shadow: 8px -8px #8306e2;
+	}
+	66%, 70% {
+		text-shadow: -5px -5px #8306e2;
+	}
+	71%, 75% {
+		text-shadow: 5px 0px #8306e2;
+	}
+	76%, 80% {
+		text-shadow: 0px 8px #8306e2;
+	}
+	81% {
+		text-shadow: 5px 5px #8306e2;
+	}
+}
+/* =============== 04. Portfolio =============== */
+#portfolio1, #portfolio2 {
+    position: relative;
+    overflow: hidden;
+    background-image: url("opt-imgs/testing1.jpg");
+    background-size: cover;
+    width: 100%;
+    min-height: 533px;
+	margin: 100px 0px 150px;
+}
+.port-title {
+    height: 50%;
+}
+.port-text {
+    position: absolute;
+    height: 50%;
+    width: 33.333%;
+    bottom: 0px;
+    right: 8.333%;
+    padding: 15px;
+}
+.port-text span {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 1px;
+    background: #fff;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+.portfolio-body {
+    margin-top: 50px;
+}
+.portfolio-a {
+    margin-top: 15px;
+    position: relative;
+}
+.portfolio-a span {
+    width: 25%;
+    position: absolute;
+    top: 10px;
+    left: 0%;
+    transition: all 1s ease;
+}
+.portfolio-full-a {
+    position: absolute;;
+    width: 100%;
+    height: 100%;
+	border: solid 0px transparent;
+	top: 0px;
+	left: 0px;
+	transition: all 1s ease;
+}
+.portfolio-full-a:hover {
+	border: solid 10px #56eda6;
+}
+/* =============== 04-1. Portfolio Typography =============== */
+.portfolio-title {
+	font-family: "eloquent-jf-pro";
+	font-size: 7em;
+	font-weight: 100;
+	color: #fff;
+	max-width: 480px;
+	font-style: italic;
+	line-height: 80px;
+    position: absolute;
+    top: 15%;
+    left: 8.333%;
+}
+.portfolio-subtitle {
+    font-family: "eloquent-jf-pro";
+	font-size: 2em;
+    font-weight: lighter;
+	color: #fff;
+    max-width: 85%;
+    margin-left: 0px;
+	line-height: 28px;
+    letter-spacing: 1.5px;
+}
+.p-white {
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #fff;
+}
+.portfolio-a a {
+    color: yellow;
+    position: absolute;
+    top: 5px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 400;
+    font-style: italic;
+    text-decoration: none;
+    padding-left: 25%;
+    transition: all 1s ease;
+}
+.portfolio-a a:hover {
+    color: #ff0;
+}
+.portfolio-a a:hover span{
+    width: 50%;
+    background: #ff0;
+}
+/* =============== 04-2. Portfolio Blue Boxes =============== */
+.portfolio-blue-box-top, .portfolio-blue-box-bottom {
+    display: inline-block;
+    clear: both;
+}
+.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3 {
+    width: 8.333%;
+    height: 50%;
+    position: absolute;
+    background: #8306e2;
+}
+.portfolio-blue-box-top-animation {
+	animation: blueBoxSlide 2s;
+}
+.portfolio-blue-box-top-1 {
+    top: 0%;
+    left: 0%;
+}
+.portfolio-blue-box-top-2 {
+    top: 0%;
+    left: 8.333%;
+}
+.portfolio-blue-box-top-3 {
+    top: 0%;
+    left: 16.666%;
+}
+.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
+    width: 8.333%;
+    height: 50%;
+    position: absolute;
+    background: #8306e2;
+}
+.portfolio-blue-box-bottom-animation {
+	animation: blueBoxSlide2 3s;
+}
+.portfolio-blue-box-bottom-1 {
+    right: 33.333%;
+    top: 50%;
+}
+.portfolio-blue-box-bottom-2 {
+    right: 24.999%;
+    top: 50%;
+}
+.portfolio-blue-box-bottom-3 {
+    right: 16.666%;
+    top: 50%;
+}
+.portfolio-blue-box-bottom-4 {
+    right: 8.333%;
+    top: 50%;
+}
+.portfolio-blue-box-animation-bye {
+	width: 0%;
+	animation: blueBoxSlidebye 2s;
+}
+@keyframes blueBoxSlide {
+    0% {
+        width: 0%;
+    }
+    75% {
+        width: 8.333%;
+        background: #8306e2;
+    }
+}
+@keyframes blueBoxSlide2 {
+    0%, 25% {
+        width: 0%;
+    }
+    100% {
+        width: 8.333%;
+        background: #8306e2;
+    }
+}
+@keyframes blueBoxSlidebye {
+	0% {
+		width: 8.333%;
+        background: #8306e2;
+    }
+    75% {
+        width: 0%;
+    }
+}

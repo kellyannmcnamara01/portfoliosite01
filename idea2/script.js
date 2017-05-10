@@ -15,6 +15,21 @@ function navScroll() {
 //add event on window scroll
 window.addEventListener("scroll", navScroll);
 
+//hamham turns to exit button
+var hamham = document.querySelector('#hamham');
+var hamToggle = document.querySelector('#ham-toggle');
+
+hamham.onclick = function() {
+    if (hamham.className == 'open') {
+        hamham.classList.remove('open');
+        hamToggle.classList.add('close');
+    }
+    else {
+        hamham.classList.add('open');
+        hamToggle.classList.remove('close');
+    }
+}
+
 function isScrolledIntoView(el) {
 
     //grab the size and position of section2

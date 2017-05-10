@@ -14,6 +14,8 @@
     00. Navigation
 	00. Typography
     00. Intro
+	00. Portfolio
+	00. Selected Clients
 
 	_________________________________________________
 
@@ -64,6 +66,14 @@ body {
 #section3 {
     padding: 100px 0px;
     background: pink;
+}
+.col {
+	width: 100%;
+	max-width: 680px;
+	clear: both;
+}
+.col-3 {
+	width: 32.9%;
 }
 
 /* =============== 02. ViewPort Border =============== */
@@ -127,13 +137,16 @@ h4 {
     letter-spacing: 1.5px;
 	text-transform: uppercase;
 }
-p, #intro-h2 {
+p, li, #intro-h2 {
     font-size: 1.6em;
     font-weight: 400;
 	color: #8306e2;
 }
+ul li {
+	list-style: none;
+}
 
-/* =============== 02. Navigation =============== */
+/* =============== 00. Navigation =============== */
 
 #main-nav {
 	width: 100%;
@@ -166,7 +179,7 @@ nav ul li a {
 	color: #8306e2;
 	text-decoration: none;
 	font-weight: 500;
-	font-size: 1.8em;
+	font-size: 1em;
 }
 nav ul li a:hover, nav ul li a:active {
 	color: #4c5d72;
@@ -205,7 +218,112 @@ nav ul li a:hover, nav ul li a:active {
 	background: transparent;
 }
 
-/* =============== 03. Intro =============== */
+/* =============== 00. HamHam =============== */
+
+#hamham {
+  width: 60px;
+  height: 50px;
+  position: relative;
+  z-index: 5000;
+  margin-right: 0px;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+#hamham span {
+  position: absolute;
+  background: blue;
+  height: 3px;
+  width: 80%;
+  margin-left: 11px;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  top: 15px;
+}
+#hamham span:nth-child(2), #hamham span:nth-child(3) {
+  top: 24px;
+  margin-left: 0px;
+}
+#hamham span:nth-child(4) {
+  top: 33px;
+  right: 0;
+}
+#hamham span:nth-child(1), #hamham span:nth-child(4) {
+  -webkit-transition: .65s ease-in-out;
+  -moz-transition: .65s ease-in-out;
+  -o-transition: .65s ease-in-out;
+  transition: .65s ease-in-out;
+}
+#hamham span:nth-child(5), #hamham span:nth-child(6) {
+  background: none;
+  top: 40px;
+  color: #8306e2;
+  font-family: sans-serif;
+}
+#hamham.open {
+	margin-right: 225px;
+}
+#hamham.open span:nth-child(1), #hamham.open span:nth-child(4) {
+   width: 0%;
+}
+#hamham.open span:nth-child(4) {
+  right: 0;
+}
+#hamham.open span:nth-child(2) {
+  transform: rotate(30deg);
+  transition-delay: .5s;
+}
+#hamham.open span:nth-child(3) {
+  transform: rotate(-30deg);
+  transition-delay: .5s;
+}
+
+/* =============== 00. Ham Toggle =============== */
+
+#ham-toggle {
+  position: absolute;
+  position: fixed;
+  z-index: 3000;
+  max-width: 250px;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: #373540; /* #ae5dec */
+  /*border-left: solid 15px #8306e2;*/
+  display : flex;
+  align-items : center;
+  transition: 3s;
+}
+#ham-toggle ul {
+  list-style: none;
+  padding-left: 0px;
+}
+#ham-toggle ul li {
+  padding-bottom: 10px;
+}
+#ham-toggle ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#ham-toggle ul li a:hover, #ham-toggle ul li a:active, #ham-toggle ul li a:focus {
+	outline: none;
+	color: #56eda6;
+}
+#ham-toggle.close {
+  width: 0%;
+  /*border-left: solid 0px #8306e2;*/
+  transition: 2s;
+  transition-delay: -1.5s;
+}
+
+/* =============== 00. Intro =============== */
 
 #intro {
 	max-width: 537px;
@@ -233,7 +351,7 @@ nav ul li a:hover, nav ul li a:active {
 	padding-bottom: 25px;
 }
 
-/* =============== 04. Portfolio =============== */
+/* =============== 00. Portfolio =============== */
 
 #portfolio1, #portfolio2 {
     position: relative;
@@ -290,120 +408,138 @@ nav ul li a:hover, nav ul li a:active {
 .portfolio-full-a:hover {
 	border: solid 10px #56eda6;
 }
-/* =============== 04-1. Portfolio Typography =============== */
-.portfolio-title {
-	font-family: "eloquent-jf-pro";
-	font-size: 7em;
-	font-weight: 100;
-	color: #fff;
-	max-width: 480px;
-	font-style: italic;
-	line-height: 80px;
-    position: absolute;
-    top: 15%;
-    left: 8.333%;
+
+	/* =============== 04-1. Portfolio Typography =============== */
+
+	.portfolio-title {
+		font-family: "eloquent-jf-pro";
+		font-size: 7em;
+		font-weight: 100;
+		color: #fff;
+		max-width: 480px;
+		font-style: italic;
+		line-height: 80px;
+	    position: absolute;
+	    top: 15%;
+	    left: 8.333%;
+	}
+	.port-text h4 {
+		margin-left: 0;
+	}
+	.portfolio-a a {
+	    color: yellow;
+	    position: absolute;
+	    top: 5px;
+	    color: #fff;
+	    font-size: 1.3em;
+	    font-weight: 400;
+	    font-style: italic;
+	    text-decoration: none;
+	    padding-left: 25%;
+	    transition: all 1s ease;
+	}
+	.portfolio-a a:hover {
+	    color: #ff0;
+	}
+	.portfolio-a a:hover span{
+	    width: 50%;
+	    background: #ff0;
+	}
+
+	/* =============== 04-2. Portfolio Blue Boxes =============== */
+
+	.portfolio-blue-box-top, .portfolio-blue-box-bottom {
+	    display: inline-block;
+	    clear: both;
+	}
+	.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3 {
+	    width: 8.333%;
+	    height: 50%;
+	    position: absolute;
+	    background: #8306e2;
+	}
+	.portfolio-blue-box-top-animation {
+		animation: blueBoxSlide 2s;
+	}
+	.portfolio-blue-box-top-1 {
+	    top: 0%;
+	    left: 0%;
+	}
+	.portfolio-blue-box-top-2 {
+	    top: 0%;
+	    left: 8.333%;
+	}
+	.portfolio-blue-box-top-3 {
+	    top: 0%;
+	    left: 16.666%;
+	}
+	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
+	    width: 8.333%;
+	    height: 50%;
+	    position: absolute;
+	    background: #8306e2;
+	}
+	.portfolio-blue-box-bottom-animation {
+		animation: blueBoxSlide2 3s;
+	}
+	.portfolio-blue-box-bottom-1 {
+	    right: 33.333%;
+	    top: 50%;
+	}
+	.portfolio-blue-box-bottom-2 {
+	    right: 24.999%;
+	    top: 50%;
+	}
+	.portfolio-blue-box-bottom-3 {
+	    right: 16.666%;
+	    top: 50%;
+	}
+	.portfolio-blue-box-bottom-4 {
+	    right: 8.333%;
+	    top: 50%;
+	}
+	.portfolio-blue-box-animation-bye {
+		width: 0%;
+		animation: blueBoxSlidebye 2s;
+	}
+	@keyframes blueBoxSlide {
+	    0% {
+	        width: 0%;
+	    }
+	    75% {
+	        width: 8.333%;
+	        background: #8306e2;
+	    }
+	}
+	@keyframes blueBoxSlide2 {
+	    0%, 25% {
+	        width: 0%;
+	    }
+	    100% {
+	        width: 8.333%;
+	        background: #8306e2;
+	    }
+	}
+	@keyframes blueBoxSlidebye {
+		0% {
+			width: 8.333%;
+	        background: #8306e2;
+	    }
+	    75% {
+	        width: 0%;
+	    }
+	}
+
+/* =============== 00. Selected Clients =============== */
+
+#selected-clients {
+	padding: 150px 0px;
 }
-.port-text h4 {
-	margin-left: 0;
+#selected-clients .col {
+	padding: 75px 0px;
 }
-.portfolio-a a {
-    color: yellow;
-    position: absolute;
-    top: 5px;
-    color: #fff;
-    font-size: 1.3em;
-    font-weight: 400;
-    font-style: italic;
-    text-decoration: none;
-    padding-left: 25%;
-    transition: all 1s ease;
-}
-.portfolio-a a:hover {
-    color: #ff0;
-}
-.portfolio-a a:hover span{
-    width: 50%;
-    background: #ff0;
-}
-/* =============== 04-2. Portfolio Blue Boxes =============== */
-.portfolio-blue-box-top, .portfolio-blue-box-bottom {
-    display: inline-block;
-    clear: both;
-}
-.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3 {
-    width: 8.333%;
-    height: 50%;
-    position: absolute;
-    background: #8306e2;
-}
-.portfolio-blue-box-top-animation {
-	animation: blueBoxSlide 2s;
-}
-.portfolio-blue-box-top-1 {
-    top: 0%;
-    left: 0%;
-}
-.portfolio-blue-box-top-2 {
-    top: 0%;
-    left: 8.333%;
-}
-.portfolio-blue-box-top-3 {
-    top: 0%;
-    left: 16.666%;
-}
-.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
-    width: 8.333%;
-    height: 50%;
-    position: absolute;
-    background: #8306e2;
-}
-.portfolio-blue-box-bottom-animation {
-	animation: blueBoxSlide2 3s;
-}
-.portfolio-blue-box-bottom-1 {
-    right: 33.333%;
-    top: 50%;
-}
-.portfolio-blue-box-bottom-2 {
-    right: 24.999%;
-    top: 50%;
-}
-.portfolio-blue-box-bottom-3 {
-    right: 16.666%;
-    top: 50%;
-}
-.portfolio-blue-box-bottom-4 {
-    right: 8.333%;
-    top: 50%;
-}
-.portfolio-blue-box-animation-bye {
-	width: 0%;
-	animation: blueBoxSlidebye 2s;
-}
-@keyframes blueBoxSlide {
-    0% {
-        width: 0%;
-    }
-    75% {
-        width: 8.333%;
-        background: #8306e2;
-    }
-}
-@keyframes blueBoxSlide2 {
-    0%, 25% {
-        width: 0%;
-    }
-    100% {
-        width: 8.333%;
-        background: #8306e2;
-    }
-}
-@keyframes blueBoxSlidebye {
-	0% {
-		width: 8.333%;
-        background: #8306e2;
-    }
-    75% {
-        width: 0%;
-    }
+#selected-clients ul {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0px 0px 0px 30px;
 }

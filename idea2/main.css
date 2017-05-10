@@ -10,12 +10,10 @@
 
 	INDEX
 	01. Attributes
-	00. ViewPort Boarder
-    02. Navigation
-    03. Intro
-        03-1. Intro Placement
-        03-2. Intro Typography
-        03-3. Intro Animations
+	02. ViewPort Boarder
+    00. Navigation
+	00. Typography
+    00. Intro
 
 	_________________________________________________
 
@@ -104,6 +102,37 @@ body {
 	border-bottom: 15px solid #8306e2;
 }
 
+/* =============== 00. Typography =============== */
+
+.text-center {
+	text-align: center;
+}
+.white {
+	color: #fff;
+}
+.purple {
+	color: #8306e2;
+}
+.grey {
+	color: #25232e;
+}
+.green {
+	color: #56eda6;
+}
+h4 {
+	font-size: 1.8em;
+	color: #fff;
+    max-width: 85%;
+	line-height: 20px;
+    letter-spacing: 1.5px;
+	text-transform: uppercase;
+}
+p, #intro-h2 {
+    font-size: 1.6em;
+    font-weight: 400;
+	color: #8306e2;
+}
+
 /* =============== 02. Navigation =============== */
 
 #main-nav {
@@ -118,7 +147,7 @@ body {
 	color: #8306e2;
 	padding-top: 8px;
 	font-family: "eloquent-jf-pro";
-	font-size: 2.5em;
+	font-size: 1.5em;
 	letter-spacing: 2px;
 	float: left;
 }
@@ -178,52 +207,11 @@ nav ul li a:hover, nav ul li a:active {
 
 /* =============== 03. Intro =============== */
 
-/* =============== 03-1. Intro Placement =============== */
-
 #intro {
-	/*border: solid 10px #8306e2;
-	padding: 50px 0px 50px 50px;*/
 	max-width: 537px;
 	margin: 0 auto;
 	position: relative;
-	/*margin-bottom: 100px;*/
 }
-/*#intro span {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 7px #fff;
-    border-style: solid dashed;
-    width: 100%;
-    height: 100%;
-    animation: borderjiggle1 2s linear;
-}
-#intro span:nth-child(2) {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 5px #fff;
-    border-style: dashed solid;
-    width: 100%;
-    height: 100%;
-    animation: borderjiggle2 2s linear;
-}
-#intro span:nth-child(3) {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: solid 7px #fff;
-    width: 100%;
-    height: 100%;
-    animation: borderjiggle3 2s linear;
-}
-#intro:hover span {
-    display: block;
-}*/
-/* =============== 03-2. Intro Typography =============== */
 
 #call-out {
 	font-family: "eloquent-jf-pro";
@@ -237,229 +225,16 @@ nav ul li a:hover, nav ul li a:active {
 	line-height: 100px;
 	text-transform: uppercase;
 }
-/*#intro:hover #call-out {
-	text-shadow: -5px -5px #8306e2;
-	animation: textshadow1 2s linear;
-	background-image: url("opt-imgs/pattern2.gif");
-	background-clip: text;
-	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}*/
-#h2-text{
-	color: #8306e2;
-	font-size: 1.6em;
-	font-weight: 400;
+
+.intro-text{
 	max-width: 550px;
 	line-height: 1.25;
 	margin-left: 15px;
 	padding-bottom: 25px;
 }
-/* =============== 03-3. Intro Animations ===============
 
-@keyframes borderjiggle1 {
-  0% {
-    top: 0;
-    left: 0;
-    opacity: 1;
-  }
-  1%, 12% {
-    top: 10px;
-    left: 0px;
-  }
-  13% {
-    top: 3px;
-    left: -10px;
-    opacity: 0;
-  }
-  24% {
-    top: 3px;
-    left: -10px;
-    opacity: 1;
-  }
-  25%, 35% {
-    top: -20px;
-    left: 10px;
-    opacity: 1;
-  }
-  36% {
-    top: 8px;
-    left: 5px;
-    opacity: 0;
-  }
-  56% {
-    top: 8px;
-    left: 5px;
-    opacity: 1;
-  }
-  57%, 58% {
-    top: -5px;
-    left: -15px;
-    opacity: 0;
-  }
-  59%, 62% {
-    top: 7px;
-    left: -25px;
-    opacity: 1;
-  }
-  64%, 70% {
-    top: -10px;
-    left: 20px;
-    opacity: 0;
-  }
-  72%, 80% {
-    top: 0px;
-    left: -3px;
-    opacity: 1;
-  }
-  81%, 85% {
-    top: 30px;
-    left: 15px;
-    opacity: 0;
-  }
-  86%, 90% {
-    opacity: 1;
-  }
-  92%, 95% {
-    top: -10px;
-    left: 0px;
-    opacity: 1;
-  }
-  96%, 98% {
-    top: 0;
-    left: -5px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    left: 0;
-    opacity: 1;
-  }
-}
-@keyframes borderjiggle2 {
-  0% {
-    top: -15px;
-    left: 0;
-    opacity: 0;
-  }
-  1%, 12% {
-    top: 0px;
-    left: -10px;
-    opacity: 1;
-  }
-  13% {
-    top: 10px;
-    left: -5px;
-    opacity: 0;
-  }
-  24% {
-    top: -10px;
-    left: 0px;
-    opacity: 1;
-  }
-  25%, 35% {
-    top: 10px;
-    left: -5px;
-    opacity: 1;
-  }
-  36% {
-    top: 8px;
-    left: 5px;
-    opacity: 0;
-  }
-  56% {
-    top: 8px;
-    left: 5px;
-    opacity: 1;
-  }
-  57%, 58% {
-    top: -10px;
-    left: -15px;
-    opacity: 0;
-  }
-  59%, 62% {
-    top: 10px;
-    left: -25px;
-    opacity: 1;
-  }
-}
-@keyframes borderjiggle3 {
-  0% {
-    top: 5px;
-    left: 5px;
-    opacity: 1;
-  }
-  1%, 12% {
-    top: 0px;
-    left: -3px;
-    opacity: 0;
-  }
-  13% {
-    top: -5px;
-    left: 0px;
-    opacity: 1;
-  }
-  24% {
-    top: -2px;
-    left: 5px;
-    opacity: 0;
-  }
-  25%, 35% {
-    top: 7px;
-    left: 0px;
-    opacity: 0;
-  }
-  36% {
-    top: 0px;
-    left: -5px;
-    opacity: 1;
-  }
-  56% {
-    top: -3px;
-    left: 5px;
-    opacity: 0;
-  }
-  57%, 58% {
-    top: -5px;
-    left: -8px;
-    opacity: 1;
-  }
-  59%, 62% {
-    top: 7px;
-    left: 0px;
-    opacity: 0;
-  }
-}
-@keyframes textshadow1 {
-	0%, 10% {
-		text-shadow: 5px 5px #8306e2;
-	}
-	15%, 20% {
-		text-shadow: 0px 0px #8306e2;
-	}
-	25% {
-		text-shadow: -8px 8px #8306e2;
-	}
-	30%, 55% {
-		text-shadow: 0px 0px #8306e2;
-	}
-	60%, 65% {
-		text-shadow: 8px -8px #8306e2;
-	}
-	66%, 70% {
-		text-shadow: -5px -5px #8306e2;
-	}
-	71%, 75% {
-		text-shadow: 5px 0px #8306e2;
-	}
-	76%, 80% {
-		text-shadow: 0px 8px #8306e2;
-	}
-	81% {
-		text-shadow: 5px 5px #8306e2;
-	}
-}
 /* =============== 04. Portfolio =============== */
+
 #portfolio1, #portfolio2 {
     position: relative;
     overflow: hidden;
@@ -528,20 +303,8 @@ nav ul li a:hover, nav ul li a:active {
     top: 15%;
     left: 8.333%;
 }
-.portfolio-subtitle {
-    font-family: "eloquent-jf-pro";
-	font-size: 2em;
-    font-weight: lighter;
-	color: #fff;
-    max-width: 85%;
-    margin-left: 0px;
-	line-height: 28px;
-    letter-spacing: 1.5px;
-}
-.p-white {
-    font-size: 1.6em;
-    font-weight: 400;
-    color: #fff;
+.port-text h4 {
+	margin-left: 0;
 }
 .portfolio-a a {
     color: yellow;

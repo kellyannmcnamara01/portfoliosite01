@@ -69,8 +69,12 @@ body {
 }
 .col {
 	width: 100%;
-	max-width: 680px;
+	max-width: 600px;
 	clear: both;
+}
+.col-2 {
+	width: 49.9%;
+	float: left;
 }
 .col-3 {
 	width: 32.9%;
@@ -533,7 +537,7 @@ nav ul li a:hover, nav ul li a:active {
 /* =============== 00. Selected Clients =============== */
 
 #selected-clients {
-	padding: 150px 0px;
+	padding: 150px 0px 100px;
 }
 #selected-clients .col {
 	padding: 75px 0px;
@@ -542,4 +546,24 @@ nav ul li a:hover, nav ul li a:active {
 	display: inline-block;
 	vertical-align: top;
 	padding: 0px 0px 0px 30px;
+}
+#selected-clients ul li {
+	padding-bottom: 10px;
+}
+
+/* =============== 00. Contact =============== */
+
+#contact {
+	background: #8306e2;
+	padding: 100px 0px 160px;
+}
+#contact h4 {
+	margin-left: 0px;
+}
+#contact a{
+	text-decoration: none;
+}
+#contact a:hover, #contact a:active, #contact a:focus {
+	outline: none;
+	color: #56eda6;
 }

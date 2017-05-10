@@ -2,7 +2,9 @@
 
 var navBg = document.getElementById("nav-logo-type");
 var section1 = document.getElementById("section1").getBoundingClientRect();
+var section2 = document.getElementById("section2").getBoundingClientRect();
 var section1Height = section1.height;
+var section2Height = section1.height;
 //console.log('the height of section 1 is ' + section1Height);
 
 function navScroll() {
@@ -20,6 +22,16 @@ var hamham = document.querySelector('#hamham');
 var hamToggle = document.querySelector('#ham-toggle');
 
 hamham.onclick = function() {
+    if (hamham.className == 'open') {
+        hamham.classList.remove('open');
+        hamToggle.classList.add('close');
+    }
+    else {
+        hamham.classList.add('open');
+        hamToggle.classList.remove('close');
+    }
+}
+hamToggle.onclick = function() {
     if (hamham.className == 'open') {
         hamham.classList.remove('open');
         hamToggle.classList.add('close');

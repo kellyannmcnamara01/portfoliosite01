@@ -651,7 +651,7 @@ nav ul li a:hover, nav ul li a:active {
 }
 /* =============== 525px =============== */
 @media only screen and (max-width: 525px) {
-	/* ========== Portfolio ==========*/
+	/* ========== Portfolio ========== */
 	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
 		height: 60%;
 		top: 45%;
@@ -659,10 +659,32 @@ nav ul li a:hover, nav ul li a:active {
 	.port-text {
 		height: 55%;
 	}
+	/* ========== Contact ========== */
+	#selected-clients ul {
+		padding: 0px;
+	}
+	.col-3 {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 /* =============== 505px =============== */
 @media only screen and (max-width: 505px) {
+	/* ========== HamHam ========== */
+	#nav-logo {
+		font-size: 1.25em;
+	}
+	#hamham {
+		width:40px;
+	}
+	#ham-toggle {
+		max-width: 190px;
+	}
+	#hamham.open {
+		margin-right: 157px;
+		margin-top: -3px;
+	}
 	/* ========== Intro ==========*/
 	#intro {
 		max-width: 345px;s
@@ -726,10 +748,18 @@ nav ul li a:hover, nav ul li a:active {
 	        width: 0%;
 	    }
 	}
+	/* ========== Contact ========== */
+	.col-2 {
+		width: 50%;
+		margin: 0 auto;
+	}
 }
 /* =============== 375px =============== */
 @media only screen and (max-width: 375px) {
 	/* ========== Intro ==========*/
+	#section1 {
+		margin-top: -25px !important;
+	}
 	#intro {
 		max-width: 300px;
 	}
@@ -737,10 +767,33 @@ nav ul li a:hover, nav ul li a:active {
 		font-size: 5.5em;
 		line-height: 50px;
 	}
+	/* ========== Contact ========== */
+	.col-2 {
+		width: 100%;
+		margin: 0 auto;
+	}
 }
 /* =============== 325px =============== */
 @media only screen and (max-width: 325px) {
-	/* ========== Portfolio ==========*/
+	/* ========== HamHam ========== */
+	#hamham {
+		width:30px;
+	}
+	#ham-toggle {
+		max-width: 170px;
+	}
+	#hamham.open {
+		margin-right: 137px;
+		margin-top: -3px;
+	}
+	#ham-toggle ul {
+		margin-left: 17px;
+	}
+	/* ========= Intro ==========*/
+	#section1 {
+		margin-top: -75px !important;
+	}
+	/* ========== Portfolio ========== */
 	.portfolio-title {
 		font-size: 5em;
 		line-height: 50px;

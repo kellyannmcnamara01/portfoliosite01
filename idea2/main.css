@@ -16,6 +16,8 @@
     00. Intro
 	00. Portfolio
 	00. Selected Clients
+	00. Contact/Footer
+	00. Media Queries
 
 	_________________________________________________
 
@@ -371,7 +373,7 @@ nav ul li a:hover, nav ul li a:active {
     background-size: cover;
     width: 100%;
     min-height: 533px;
-	/*margin: 100px 0px 150px;*/
+	transition: 1s ease all;
 }
 .port-title {
     height: 50%;
@@ -383,6 +385,7 @@ nav ul li a:hover, nav ul li a:active {
     bottom: 0px;
     right: 8.333%;
     padding: 15px;
+	transition: 1s ease all;
 }
 .port-text span {
     content: '';
@@ -489,21 +492,23 @@ nav ul li a:hover, nav ul li a:active {
 	    height: 50%;
 	    position: absolute;
 	    background: #8306e2;
+		top: 50%;
+		transition: 1s ease all;
 	}
 	.portfolio-blue-box-bottom-animation {
 		animation: blueBoxSlide2 3s;
 	}
 	.portfolio-blue-box-bottom-1 {
 	    right: 33.333%;
-	    top: 50%;
+
 	}
 	.portfolio-blue-box-bottom-2 {
 	    right: 24.999%;
-	    top: 50%;
+
 	}
 	.portfolio-blue-box-bottom-3 {
 	    right: 16.666%;
-	    top: 50%;
+
 	}
 	.portfolio-blue-box-bottom-4 {
 	    right: 8.333%;
@@ -573,4 +578,139 @@ nav ul li a:hover, nav ul li a:active {
 #contact a:hover, #contact a:active, #contact a:focus {
 	outline: none;
 	color: #56eda6;
+}
+
+/* =============== 00. Media Quries =============== */
+/* =============== 960px =============== */
+@media only screen and (max-width: 960px) {
+	/* ========== Portfolio ==========*/
+	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
+		height: 60%;
+		top: 45%;
+	}
+	.port-text {
+		height: 55%;
+	}
+}
+/* =============== 710px =============== */
+@media only screen and (max-width: 710px) {
+	/* ========== Portfolio ==========*/
+	#portfolio1, #portfolio2 {
+		min-height: 600px;
+	}
+	.port-text {
+		width: 42%;
+	}
+	.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3, .portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
+		width: 17%;
+	}
+	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
+		height: 60%;
+		top: 50%;
+	}
+	.port-text {
+		height: 50%;
+	}
+	@keyframes blueBoxSlide {
+	    0% {
+	        width: 0%;
+	    }
+	    75% {
+	        width: 17%;
+	        background: #8306e2;
+	    }
+	}
+	@keyframes blueBoxSlide2 {
+	    0%, 25% {
+	        width: 0%;
+	    }
+	    100% {
+	        width: 17%;
+	        background: #8306e2;
+	    }
+	}
+	@keyframes blueBoxSlidebye {
+		0% {
+			width: 17%;
+	        background: #8306e2;
+	    }
+	    75% {
+	        width: 0%;
+	    }
+	}
+}
+/* =============== 525px =============== */
+@media only screen and (max-width: 525px) {
+	/* ========== Portfolio ==========*/
+	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
+		height: 60%;
+		top: 45%;
+	}
+	.port-text {
+		height: 55%;
+	}
+}
+
+/* =============== 505px =============== */
+@media only screen and (max-width: 505px) {
+	/* ========== Portfolio ==========*/
+	.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3 {
+		top: 50%;
+		width: 33.333%;
+	}
+	.portfolio-blue-box-top-2 {
+		left: 33.333%;
+	}
+	.portfolio-blue-box-top-3 {
+		left: 66.666%;
+	}
+	.portfolio-blue-box-bottom{
+		display: none;
+	}
+	.port-text {
+		height: 50%;
+		left: 0%;
+		margin-left: 10px;
+		width: 90%;
+	}
+	.portfolio-title {
+		font-size: 6em;
+		width: 85%;
+		line-height: 60px;
+	}
+	@keyframes blueBoxSlide {
+	    0% {
+	        width: 0%;
+	    }
+	    75% {
+	        width: 33.333%;
+	        background: #8306e2;
+	    }
+	}
+	@keyframes blueBoxSlide2 {
+	    0%, 25% {
+	        width: 0%;
+	    }
+	    100% {
+	        width: 33.333%;
+	        background: #8306e2;
+	    }
+	}
+	@keyframes blueBoxSlidebye {
+		0% {
+			width: 33.333%;
+	        background: #8306e2;
+	    }
+	    75% {
+	        width: 0%;
+	    }
+	}
+}
+/* =============== 505px =============== */
+@media only screen and (max-width: 325px) {
+	/* ========== Portfolio ==========*/
+	.portfolio-title {
+		font-size: 5em;
+		line-height: 50px;
+	}
 }

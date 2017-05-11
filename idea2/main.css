@@ -59,7 +59,9 @@ body {
 #section1 {
 	height: 90vh;
 	min-height: 600px;
-	padding-top: calc(50% - 375px);
+	/*padding-top: calc(50% - 375px);*/
+	display: flex;
+    align-items: center;
 }
 #section2 {
     padding: 100px 0px;
@@ -594,6 +596,14 @@ nav ul li a:hover, nav ul li a:active {
 }
 /* =============== 710px =============== */
 @media only screen and (max-width: 710px) {
+	/* ========== Intro ==========*/
+	#intro {
+		max-width: 434px;
+	}
+	#call-out {
+		font-size: 9em;
+		line-height: 90px;
+	}
 	/* ========== Portfolio ==========*/
 	#portfolio1, #portfolio2 {
 		min-height: 600px;
@@ -653,6 +663,17 @@ nav ul li a:hover, nav ul li a:active {
 
 /* =============== 505px =============== */
 @media only screen and (max-width: 505px) {
+	/* ========== Intro ==========*/
+	#intro {
+		max-width: 345px;s
+	}
+	#call-out {
+		font-size: 7em;
+		line-height: 70px;
+	}
+	#intro-h2, .intro-text {
+		margin-left: 0px;
+	}
 	/* ========== Portfolio ==========*/
 	.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3 {
 		top: 50%;
@@ -706,7 +727,18 @@ nav ul li a:hover, nav ul li a:active {
 	    }
 	}
 }
-/* =============== 505px =============== */
+/* =============== 375px =============== */
+@media only screen and (max-width: 375px) {
+	/* ========== Intro ==========*/
+	#intro {
+		max-width: 300px;
+	}
+	#call-out {
+		font-size: 5.5em;
+		line-height: 50px;
+	}
+}
+/* =============== 325px =============== */
 @media only screen and (max-width: 325px) {
 	/* ========== Portfolio ==========*/
 	.portfolio-title {

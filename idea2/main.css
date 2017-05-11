@@ -237,15 +237,17 @@ nav ul li a:hover, nav ul li a:active {
 }
 #hamham span {
   position: absolute;
-  background: blue;
-  height: 3px;
-  width: 80%;
   margin-left: 11px;
   -webkit-transition: .4s ease-in-out;
   -moz-transition: .4s ease-in-out;
   -o-transition: .4s ease-in-out;
   transition: .4s ease-in-out;
   top: 15px;
+}
+.ham-span {
+	background: #8306e2;
+	height: 3px;
+    width: 80%;
 }
 #hamham span:nth-child(2), #hamham span:nth-child(3) {
   top: 24px;
@@ -298,8 +300,8 @@ nav ul li a:hover, nav ul li a:active {
   top: 0;
   background: #373540; /* #ae5dec */
   /*border-left: solid 15px #8306e2;*/
-  display : flex;
-  align-items : center;
+  display: flex;
+  align-items: center;
   transition: 3s;
 }
 #ham-toggle ul {
@@ -356,7 +358,12 @@ nav ul li a:hover, nav ul li a:active {
 }
 
 /* =============== 00. Portfolio =============== */
-
+.portfolio-view {
+	height: 90vh;
+	min-height: 733px;
+	display: flex;
+    align-items: center;
+}
 #portfolio1, #portfolio2 {
     position: relative;
     overflow: hidden;
@@ -364,7 +371,7 @@ nav ul li a:hover, nav ul li a:active {
     background-size: cover;
     width: 100%;
     min-height: 533px;
-	margin: 100px 0px 150px;
+	/*margin: 100px 0px 150px;*/
 }
 .port-title {
     height: 50%;

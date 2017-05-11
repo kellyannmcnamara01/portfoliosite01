@@ -1,15 +1,17 @@
 //alert("hello");
 
 var navBg = document.getElementById("nav-logo-type");
-var section1 = document.getElementById("section1").getBoundingClientRect();
 var section2 = document.getElementById("section2").getBoundingClientRect();
-var section1Height = section1.height;
-var section2Height = section1.height;
+var section2Top = section2.top - 25;
+var section2Bottom = section2.bottom - 25;
 //console.log('the height of section 1 is ' + section1Height);
 
+console.log(section2Bottom);
+
 function navScroll() {
-    if (document.body.scrollTop >= section1Height) {
+    if (document.body.scrollTop >= section2Top && document.body.scrollTop <= section2Bottom) {
         navBg.style.color = "#fff";
+        console.log('hi');
     } else {
         navBg.style.color = "#8306e2";
     } // end if
@@ -60,17 +62,7 @@ function isScrolledIntoView(el) {
 
     //create a function to add and remove the animation classes and pass through the portfolio id, the top boxes and the bottom boxes
     function setAnimation(boxes, boxesTop, boxesBottom) {
-        /*if(boxes >= 780 && boxes <= 900){
-            for (var i = 0; i < boxesTop.length; i++){
-                boxesTop[i].style.display = "block";
-                boxesTop[i].classList.add("portfolio-blue-box-animation-bye");
-            }
-            for (var i = 0; i < boxesBottom.length; i++){
-                boxesBottom[i].style.display = "block";
-                boxesBottom[i].classList.add("portfolio-blue-box-animation-bye");
-            }
-
-        } else*/ if(boxes <= 780 && boxes >= -500) {
+        if(boxes <= 780 && boxes >= -500) {
             for (var i = 0; i < boxesTop.length; i++){
                 boxesTop[i].style.display = "block";
                 boxesTop[i].classList.remove("portfolio-blue-box-animation-bye");

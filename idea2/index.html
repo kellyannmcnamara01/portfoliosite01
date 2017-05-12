@@ -41,6 +41,10 @@
   	<!-- Improting Files -->
   	<link rel="stylesheet" type="text/css" href="main.css" />
     <script src="https://use.typekit.net/ezt8xfx.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <link rel="stylesheet" type="text/css" href="codeSnippet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
   	<!--for dev testing
@@ -90,13 +94,32 @@
     </div>
     <!-- Main Content -->
 	<main id="main">
+        <!-- =================== -->
+        <!-- =================== -->
+        <!-- =================== -->
+        <pre style="max-width:400px;"><code class="javascript">
+        function navScroll() {
+            if (document.body.scrollTop >= section2Top && document.body.scrollTop <= section2Bottom) {
+                navBg.style.color = "#fff";
+                console.log('hi');
+            } else {
+                navBg.style.color = "#8306e2";
+            } // end if
+        } // end navScroll
+        //add event on window scroll
+        window.addEventListener("scroll", navScroll);
+
+        //hamham turns to exit button
+        var hamham = document.querySelector('#hamham');
+        var hamToggle = document.querySelector('#ham-toggle');
+        </code></pre>
+        <!-- =================== -->
+        <!-- =================== -->
+        <!-- =================== -->
 		<!-- 00. Call Out -->
 		<div class="wrapper">
             <div id="section1">
     			<div id="intro">
-    				<!--<span></span>
-    				<span></span>
-    				<span></span>-->
     				<h1 id="call-out">code &amp; design.</h1>
     				<h2 id="intro-h2" class="intro-text">Hello, I’m <strong>Kelly Ann McNamara</strong>. A digital designer &amp; full stack developer.</h2>
     				<p class="intro-text">As a creature of intense curiosity I never just want to work on a project but immerse myself in all of the playing factors, which is why I am always looking for the newest conecpts and pushing my projects even farther.</p>

@@ -83,6 +83,12 @@ body {
 .col-3 {
 	width: 32.9%;
 }
+::selection {
+	background: #56eda6;
+}
+::-moz-selection {
+	background: #56eda6;
+}
 
 /* =============== 02. ViewPort Border =============== */
 

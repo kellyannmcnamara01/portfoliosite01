@@ -45,10 +45,29 @@ hamToggle.onclick = function() {
 }
 
 //smooth scrolling using jQuery
-$('#aboutDownArrow').click(function() {
+//home link in nav
+$('#section1-link').click(function() {
     $('html,body').animate({
-            scrollTop: $("#mainPageFeatured").offset().top},
-        2000);
+            scrollTop: $("#section1").offset().top},
+        1000);
+});
+//work link in nav
+$('#section2-link').click(function() {
+    $('html,body').animate({
+            scrollTop: $("#section2").offset().top},
+        1000);
+});
+//client link in nav
+$('#selected-clients-link').click(function() {
+    $('html,body').animate({
+            scrollTop: $("#selected-clients").offset().top},
+        1000);
+});
+//client link in nav
+$('#contact-link').click(function() {
+    $('html,body').animate({
+            scrollTop: $("#contact").offset().top},
+        1000);
 });
 
 //purple sliding boxes

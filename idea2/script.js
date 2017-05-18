@@ -1,13 +1,13 @@
 //alert("hello");
 
+//create vars
 var navBg = document.getElementById("nav-logo-type");
 var section2 = document.getElementById("section2").getBoundingClientRect();
 var section2Top = section2.top - 25;
 var section2Bottom = section2.bottom - 25;
 //console.log('the height of section 1 is ' + section1Height);
 
-console.log(section2Bottom);
-
+//kam logo colour change
 function navScroll() {
     if (document.body.scrollTop >= section2Top && document.body.scrollTop <= section2Bottom) {
         navBg.style.color = "#fff";
@@ -44,6 +44,14 @@ hamToggle.onclick = function() {
     }
 }
 
+//smooth scrolling using jQuery
+$('#aboutDownArrow').click(function() {
+    $('html,body').animate({
+            scrollTop: $("#mainPageFeatured").offset().top},
+        2000);
+});
+
+//purple sliding boxes
 function isScrolledIntoView(el) {
 
     //grab the size and position of section2
@@ -98,106 +106,3 @@ window.addEventListener("scroll", isScrolledIntoView);
 //---------------------
 //---------------------
 //---------------------
-
-/*//alert("hello");
-
-var navBg = document.getElementById("nav-logo-type");
-var section1 = document.getElementById("section1").getBoundingClientRect();
-var section1Height = section1.height;
-//console.log('the height of section 1 is ' + section1Height);
-
-function navScroll() {
-    if (document.body.scrollTop >= section1Height) {
-        navBg.style.color = "#fff";
-    } else {
-        navBg.style.color = "#8306e2";
-    } // end if
-} // end navScroll
-//add event on window scroll
-window.addEventListener("scroll", navScroll);
-
-function isScrolledIntoView(el) {
-
-    //grab the size and position of section2
-    var portfolio1 = document.getElementById("portfolio1").getBoundingClientRect();
-    var portfolio2 = document.getElementById("portfolio2").getBoundingClientRect();
-
-    //gather all the portfolio blue boxes into variables based from the portfolio div they are found in
-    var portfolio1BoxTop = document.querySelectorAll("#portfolio1 [class*='portfolio-blue-box-top-']");
-    var portfolio1BoxBottom = document.querySelectorAll("#portfolio1 [class*='portfolio-blue-box-bottom-']");
-    var portfolio2BoxTop = document.querySelectorAll("#portfolio2 [class*='portfolio-blue-box-top-']");
-    var portfolio2BoxBottom = document.querySelectorAll("#portfolio2 [class*='portfolio-blue-box-bottom-']");
-
-    var portfolio1Top = portfolio1.top;
-    var portfolio2Top = portfolio2.top;
-    var portfolioOneHeight = portfolio1.height;
-    console.log(portfolio1Top);
-
-    //if statement for portview one
-    if(portfolio1Top >= 780 && portfolio1Top <= 900){
-        for (var i = 0; i < portfolio1BoxTop.length; i++){
-            portfolio1BoxTop[i].style.display = "block";
-            portfolio1BoxTop[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-        for (var i = 0; i < portfolio1BoxBottom.length; i++){
-            portfolio1BoxBottom[i].style.display = "block";
-            portfolio1BoxBottom[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-
-    } else if(portfolio1Top <= 780 && portfolio1Top >= -500) {
-        for (var i = 0; i < portfolio1BoxTop.length; i++){
-            portfolio1BoxTop[i].style.display = "block";
-            portfolio1BoxTop[i].classList.remove("portfolio-blue-box-animation-bye");
-            portfolio1BoxTop[i].classList.add("portfolio-blue-box-top-animation");
-        }
-        for (var i = 0; i < portfolio1BoxBottom.length; i++){
-            portfolio1BoxBottom[i].style.display = "block";
-            portfolio1BoxBottom[i].classList.remove("portfolio-blue-box-animation-bye");
-            portfolio1BoxBottom[i].classList.add("portfolio-blue-box-bottom-animation");
-        }
-    } else {
-        for (var i = 0; i < portfolio1BoxTop.length; i++){
-            portfolio1BoxTop[i].style.display = "block";
-            portfolio1BoxTop[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-        for (var i = 0; i < portfolio1BoxBottom.length; i++){
-            portfolio1BoxBottom[i].style.display = "block";
-            portfolio1BoxBottom[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-    }
-
-    //if statement for portview two
-    if(portfolio2Top >= 780 && portfolio2Top <= 900){
-        for (var i = 0; i < portfolio2BoxTop.length; i++){
-            portfolio2BoxTop[i].style.display = "block";
-            portfolio2BoxTop[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-        for (var i = 0; i < portfolio2BoxBottom.length; i++){
-            portfolio2BoxBottom[i].style.display = "block";
-            portfolio2BoxBottom[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-
-    } else if(portfolio2Top <= 780 && portfolio2Top >= -500) {
-        for (var i = 0; i < portfolio2BoxTop.length; i++){
-            portfolio2BoxTop[i].style.display = "block";
-            portfolio2BoxTop[i].classList.remove("portfolio-blue-box-animation-bye");
-            portfolio2BoxTop[i].classList.add("portfolio-blue-box-top-animation");
-        }
-        for (var i = 0; i < portfolio2BoxBottom.length; i++){
-            portfolio2BoxBottom[i].style.display = "block";
-            portfolio2BoxBottom[i].classList.remove("portfolio-blue-box-animation-bye");
-            portfolio2BoxBottom[i].classList.add("portfolio-blue-box-bottom-animation");
-        }
-    } else {
-        for (var i = 0; i < portfolio2BoxTop.length; i++){
-            portfolio2BoxTop[i].style.display = "block";
-            portfolio2BoxTop[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-        for (var i = 0; i < portfolio2BoxBottom.length; i++){
-            portfolio2BoxBottom[i].style.display = "block";
-            portfolio2BoxBottom[i].classList.add("portfolio-blue-box-animation-bye");
-        }
-    }
-} // end navScroll
-window.addEventListener("scroll", isScrolledIntoView);
-*/

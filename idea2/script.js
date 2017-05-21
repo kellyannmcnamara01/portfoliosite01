@@ -4,13 +4,14 @@ window.onload = function() {
     //create vars
     var navBg = document.getElementById("nav-logo-type");
     var section2 = document.getElementById("section2").getBoundingClientRect();
+    var folioThumbs = document.getElementById("folio-thumbs").getBoundingClientRect();
     var section2Top = section2.top - 25;
-    var section2Bottom = section2.bottom - 25;
+    var folioThumbsBottom = folioThumbs.bottom - 25;
     //console.log('the height of section 1 is ' + section1Height);
 
     //kam logo colour change
     function navScroll() {
-        if (document.body.scrollTop >= section2Top && document.body.scrollTop <= section2Bottom) {
+        if (document.body.scrollTop >= section2Top && document.body.scrollTop <= folioThumbsBottom) {
             navBg.style.color = "#fff";
             console.log('hi');
         } else {
@@ -33,7 +34,7 @@ window.onload = function() {
             hamham.classList.add('open');
             hamToggle.classList.remove('close');
         }
-    }
+    };
     hamToggle.onclick = function () {
         if (hamham.className == 'open') {
             hamham.classList.remove('open');
@@ -43,8 +44,8 @@ window.onload = function() {
             hamham.classList.add('open');
             hamToggle.classList.remove('close');
         }
-    }
-
+    };
+    
     //smooth scrolling using jQuery
     //home link in nav
     $('#section1-link').click(function () {
@@ -124,7 +125,7 @@ window.onload = function() {
     } // end navScroll
     window.addEventListener("scroll", isScrolledIntoView);
 
-}
+};
 
 
     //---------------------

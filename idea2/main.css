@@ -382,11 +382,16 @@ nav ul li a:hover, nav ul li a:active {
 #portfolio1, #portfolio2 {
     position: relative;
     overflow: hidden;
-    background-image: url("opt-imgs/testing1.jpg");
     background-size: cover;
     width: 100%;
     min-height: 533px;
 	transition: 1s ease all;
+}
+#portfolio1 {
+    background-image: url("opt-imgs/folio-large-01.jpg");
+}
+#portfolio2 {
+    background-image: url("opt-imgs/folio-large-02.jpg");
 }
 .port-title {
     height: 50%;
@@ -437,7 +442,10 @@ nav ul li a:hover, nav ul li a:active {
 }
 #folio-thumbs {
 	background: #25232e;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
+}
+#folio-thumbs .col-3 {
+    margin-bottom: 16px;
 }
 .folio-thumb {
 	background-repeat: no-repeat;
@@ -451,10 +459,19 @@ nav ul li a:hover, nav ul li a:active {
     background-image: url("opt-imgs/folio-thumbnail-01.jpg");
 }
 #folio-thumb-2 {
-    background-image: url("opt-imgs/portfolio-1.jpg");
+    background-image: url("opt-imgs/folio-thumbnail-02.jpg");
 }
 #folio-thumb-3 {
-    background-image: url("opt-imgs/portfolio-2.jpg");
+    background-image: url("opt-imgs/folio-thumbnail-03.jpg");
+}
+#folio-thumb-4 {
+    background-image: url("opt-imgs/folio-thumbnail-04.jpg");
+}
+#folio-thumb-5 {
+    background-image: url("opt-imgs/folio-thumbnail-05.jpg");
+}
+#folio-thumb-6 {
+    background-image: url("opt-imgs/folio-thumbnail-06.jpg");
 }
 
 .folio-thumb span {
@@ -685,10 +702,10 @@ nav ul li a:hover, nav ul li a:active {
 	}
 	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
 		height: 60%;
-		top: 50%;
+		top: 40%;
 	}
 	.port-text {
-		height: 50%;
+		height: 60%;
 	}
 	@keyframes blueBoxSlide {
 	    0% {
@@ -722,11 +739,11 @@ nav ul li a:hover, nav ul li a:active {
 @media only screen and (max-width: 525px) {
 	/* ========== Portfolio ========== */
 	.portfolio-blue-box-bottom-1, .portfolio-blue-box-bottom-2, .portfolio-blue-box-bottom-3, .portfolio-blue-box-bottom-4 {
-		height: 60%;
-		top: 45%;
+		height: 65%;
+		top: 40%;
 	}
 	.port-text {
-		height: 55%;
+		height: 60%;
 	}
 	/* ========== Contact ========== */
 	#selected-clients ul {
@@ -767,7 +784,8 @@ nav ul li a:hover, nav ul li a:active {
 	}
 	/* ========== Portfolio ==========*/
 	.portfolio-blue-box-top-1, .portfolio-blue-box-top-2, .portfolio-blue-box-top-3 {
-		top: 50%;
+		top: 40%;
+        height: 60%;
 		width: 33.333%;
 	}
 	.portfolio-blue-box-top-2 {
@@ -780,15 +798,15 @@ nav ul li a:hover, nav ul li a:active {
 		display: none;
 	}
 	.port-text {
-		height: 50%;
+		height: 60%;
 		left: 0%;
 		margin-left: 10px;
 		width: 90%;
 	}
 	.portfolio-title {
-		font-size: 6em;
+		font-size: 4.5em;
 		width: 85%;
-		line-height: 60px;
+		line-height: 50px;
 	}
 	@keyframes blueBoxSlide {
 	    0% {

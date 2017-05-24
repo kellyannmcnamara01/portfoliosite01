@@ -82,15 +82,19 @@ window.onload = function() {
         //grab the size and position of section2
         var portfolio1 = document.getElementById("portfolio1").getBoundingClientRect();
         var portfolio2 = document.getElementById("portfolio2").getBoundingClientRect();
+        var portfolio3 = document.getElementById("portfolio3").getBoundingClientRect();
 
         //gather all the portfolio blue boxes into variables based from the portfolio div they are found in
         var portfolio1BoxTop = document.querySelectorAll("#portfolio1 [class*='portfolio-blue-box-top-']");
         var portfolio1BoxBottom = document.querySelectorAll("#portfolio1 [class*='portfolio-blue-box-bottom-']");
         var portfolio2BoxTop = document.querySelectorAll("#portfolio2 [class*='portfolio-blue-box-top-']");
         var portfolio2BoxBottom = document.querySelectorAll("#portfolio2 [class*='portfolio-blue-box-bottom-']");
+        var portfolio3BoxTop = document.querySelectorAll("#portfolio3 [class*='portfolio-blue-box-top-']");
+        var portfolio3BoxBottom = document.querySelectorAll("#portfolio3 [class*='portfolio-blue-box-bottom-']");
 
         var portfolio1Top = portfolio1.top;
         var portfolio2Top = portfolio2.top;
+        var portfolio3Top = portfolio3.top;
         //console.log(portfolio1Top);
 
         //create a function to add and remove the animation classes and pass through the portfolio id, the top boxes and the bottom boxes
@@ -119,6 +123,7 @@ window.onload = function() {
         }
 
         setAnimation(portfolio1Top, portfolio1BoxTop, portfolio1BoxBottom);
+        setAnimation(portfolio2Top, portfolio2BoxTop, portfolio2BoxBottom);
         setAnimation(portfolio2Top, portfolio2BoxTop, portfolio2BoxBottom);
 
 

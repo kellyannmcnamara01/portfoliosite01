@@ -124,7 +124,7 @@ window.onload = function() {
 
         setAnimation(portfolio1Top, portfolio1BoxTop, portfolio1BoxBottom);
         setAnimation(portfolio2Top, portfolio2BoxTop, portfolio2BoxBottom);
-        setAnimation(portfolio2Top, portfolio2BoxTop, portfolio2BoxBottom);
+        setAnimation(portfolio3Top, portfolio3BoxTop, portfolio3BoxBottom);
 
 
     } // end navScroll

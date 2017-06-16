@@ -17,6 +17,8 @@
 	00. Portfolio
 	00. Selected Clients
 	00. Contact/Footer
+	00. Cases
+		00-0. Health Hack
 	00. Media Queries
 
 	_________________________________________________
@@ -670,6 +672,122 @@ nav ul li a:hover, nav ul li a:active {
 	outline: none;
 	color: #56eda6;
 }
+
+/* =============== 00. Cases =============== */
+#cases-intro {
+	width: 625px;
+}
+.intro-text-cases {
+	line-height: 1.25;
+	padding-bottom: 50px;
+}
+.view-project__btn {
+	background: #8306e2;
+	color: #fff;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 1.25em;
+	box-shadow: inset 0px 0px 0px 0px #25232e;
+	transition: 1s ease all;
+}
+.view-project__btn:hover {
+	box-shadow: inset 165px 0px 0px 0px #25232e;
+}
+#call-out-cases {
+	font-family: "eloquent-jf-pro";
+	font-size: 7em;
+	margin: 0;
+	font-weight: 100;
+	color: #8306e2;
+	padding-top: 200px;
+	padding-bottom: 35px;
+	line-height: 75px;
+	text-transform: uppercase;
+}
+#cases-design {
+	max-width: 625px;
+	margin-top: 250px;
+	margin-bottom: 150px;
+}
+.colour-col {
+	position: relative;
+}
+#logo-concept {
+	display: flex;
+	align-items: center;
+	margin-bottom: 100px;
+}
+.case-subtitle {
+	font-size: 2em;
+	text-transform: uppercase;
+	padding-bottom: 15px;
+	color: #8306e2;
+}
+#case-logo__p {
+	padding-left: 50px;
+}
+.cases-code {
+	background: #25232e;
+	margin-top: 200px;
+	padding: 150px 0px;
+}
+.cases-code .case-subtitle {
+	color: #fff;
+}
+.cases-code .portfolio-title {
+	position: relative;
+	max-width: none;
+	left: 0;
+}
+.case-snippet {
+	padding-top: 100px;
+}
+/* =============== 000. Health Hack =============== */
+	#hh-read, #hh-blue, #hh-yellow, #hh-green, #hh-lightgrey, #hh-darkgrey {
+		width: 25px;
+		height: 25px;
+		background: #e04152;
+		border-radius: 13px 13px 13px 13px;
+		animation: colourGrow 3s ease infinite;
+		position: absolute;
+	}
+	#hh-blue {
+		background: #35adda;
+		animation-delay: .2s;
+		left: 20%;
+	}
+	#hh-yellow {
+		background: #ffcf48;
+		animation-delay: .4s;
+		left: 40%;
+	}
+	#hh-green {
+		background: #8cc34b;
+		animation-delay: .6s;
+		left: 60%;
+	}
+	#hh-lightgrey {
+		background: #ccd0d9;
+		animation-delay: .8s;
+		left: 80%;
+	}
+	#hh-darkgrey {
+		background: #434a54;
+		animation-delay: 1s;
+		left: 100%;
+	}
+	@keyframes colourGrow {
+		0%, 10% {
+			height: 25px;
+		}
+		45%, 60% {
+			height: 75px;
+			transform: translateY(-25px);
+		}
+		90%, 100% {
+			height: 25px;
+		}
+	}
 
 /* =============== 00. Media Quries =============== */
 /* =============== 960px =============== */

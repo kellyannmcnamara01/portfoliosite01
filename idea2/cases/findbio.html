@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+
+	Author: Kelly Ann McNamara
+	Date Started: Novemeber 18th, 2016
+	Class: Digital Design
+	Professor: Joanna Kommala
+	Project: Assignment 3 – Coding Portfolio Website
+
+	________________________________________________
+
+	INDEX
+    00. ViewPort Border
+	01. Main Nav
+		01-1. Logo
+		01-2. Links
+		01.3. Mobile Menu
+	00. Intro
+	00. Design
+	00. Dev
+
+-->
+
+<html lang="en">
+<head>
+    <title>Kelly Ann McNamara | Web Developer &amp; Designer</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Improting Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../main.css" />
+    <script src="https://use.typekit.net/ezt8xfx.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <link rel="stylesheet" type="text/css" href="../codeSnippet.css" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-99993870-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <!--for dev testing
+    <meta http-equiv="refresh" content="20" />-->
+</head>
+<body>
+<!-- ViewPort Border -->
+<div id="view-border__top"></div>
+<div id="view-border__right"></div>
+<div id="view-border__bottom"></div>
+<div id="view-border__left"></div>
+<!-- 01. Main Nav -->
+<nav id="main-nav">
+    <!-- 01-1. Logo -->
+    <div id="nav-logo">
+        <p id="nav-logo-type">k/a/m</p>
+    </div>
+    <!-- 01-2. Links -->
+    <!--<div id="main-links">
+          <ul>
+            <li><a href="#about" title="About" class="nav-line">about</a></li>
+            <li><a href="#portfolio-section" title="Portfolio" class="nav-line">portfolio</a></li>
+            <li><a href="#contact-section" title="Contact Kelly" class="nav-line">contact</a></li>
+          </ul>
+    </div>-->
+    <!-- Hamham -->
+    <div id="main-links">
+        <div id="hamham" class="">
+            <span class="ham-span" id="ham-span1"></span>
+            <span class="ham-span" id="ham-span2"></span>
+            <span class="ham-span" id="ham-span3"></span>
+            <span class="ham-span" id="ham-span4"></span>
+            <!--<span>menu</span>
+            <span>exit</span>-->
+        </div>
+    </div>
+</nav>
+<!-- Ham Toggle -->
+<div id="ham-toggle" class="close">
+    <ul>
+        <li id="section1-link"><a href="../index.html">Home</a></li>
+        <li id="section2-link"><a href="../index.html#section2">Work</a></li>
+        <li id="selected-clients-link"><a href="../index.html#selected-clients">Clients</a></li>
+        <li id="contact-link"><a>Contact</a></li>
+        <li><a href="http://codepen.io/kellyannmcnamara/" target="_blank">Playground</a></li>
+        <li><a href="https://github.com/kellyannmcnamara01/" target="_blank">Repos</a></li>
+    </ul>
+</div>
+<!-- Main Content -->
+<main id="main">
+    <div class="wrapper">
+        <!-- Intro -->
+        <div id="cases-intro">
+            <h1 id="call-out-cases">Find Biometrics</h1>
+            <p class="intro-text-cases">Find Biometrics is a current client project. On display is phase one. Here I did the front end development and was the UX/UI designer. This site includes a fully functioning back end for members to log in and also has an admin side but is currently only displaying the development I hae done. I was able to collaborate with other developers on this project that I have yet to met. This project was also my first introduction to Laravel. Unfortunately there isn't much more I say currently say.</p>
+            <a class="view-project__btn" href="http://kellyannmcnamara.ca/clients/findBio/" target="_blank" title="view project">View Live Project</a>
+        </div>
+        <!-- Design Elements --
+        <div id="cases-design">
+            <div id="logo-concept">
+                <div id="case-logo">
+                    <img src="../opt-imgs/hh-logo.svg" width="200px"/>
+                </div>
+                <div id="case-logo__p">
+                    <h3 class="case-subtitle">Logo Concept &amp; Colours</h3>
+                    <p>This logo first looks like a dumb bell. The reason we picked the dumb bell as our main inspiration is because it is something everyone recognizes. Within the dumb bell there is two H's representing Health Hack.</p>
+                </div>
+            </div>
+            <div class="colour-col">
+                <div id="hh-read"></div>
+                <div id="hh-blue"></div>
+                <div id="hh-yellow"></div>
+                <div id="hh-green"></div>
+                <div id="hh-lightgrey"></div>
+                <div id="hh-darkgrey"></div>
+            </div>
+        </div>-->
+    </div>
+    <!-- Code Behind -->
+    <div class="cases-code" style="padding: 0px">
+    </div>
+    <!-- Contact -->
+    <footer id="contact">
+        <div class="wrapper">
+            <div class="col">
+                <div class="col-2">
+                    <h4> – Let's Talk</h4>
+                </div>
+                <div class="col-2">
+                    <p><a href="mailto:hi@kellyannmcnamara.ca" class="white">hi@kellyannmcnamara.ca</a></p>
+                    <p><a href="http://codepen.io/kellyannmcnamara/" target="_blank" class="white">codepen.io/kellyannmcnamara/</a></p>
+                    <p><a href="https://github.com/kellyannmcnamara01/" target="_blank" class="white">github.com/kellyannmcnamara01/</a></p>
+                    <p><a href="https://www.behance.net/kellyannmcnamara" target="_blank" class="white">be.net/kellyannmcnamara</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+<!--JS Import-->
+<script type="text/javascript" src="cases.js"></script>
+</body>
